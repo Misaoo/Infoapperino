@@ -25,64 +25,64 @@ Scrummaster: Johan
 
 
 Språk vi kommer använda:
-?     Python
-?    flask ? API
+-     Python
+-    flask ? API
 
 Databas:
-?     Mysql
-?     Json
-?     AJAX
+-    Mysql
+-     Json
+-     AJAX
 
 Stack:
-?     LAMP // Alla ska sätta sig in lite mer i detta (Linux, Apache, MySQL, PHP)
+-     LAMP // Alla ska sätta sig in lite mer i detta (Linux, Apache, MySQL, PHP)
 
 
 Analogt:
-?        UML
-?        Loggbok/dokumentation
-?        ER-modell
+-        UML
+-        Loggbok/dokumentation
+-        ER-modell
 
 Ev. hårdvara:
-?       RPi
+-       RPi
 
 
 
 Features:
 Foto:
-? Gallerifunktion
-? Koppling till instagram och hashtag-flöde
-? Webbappen kommer visa de senaste 1-5 fotona som laddats upp, istället för alla på en gång.
-? Mobilappen kommer att ha ett eget galleri där bilder kan laddas upp direkt utan att gå genom instagram.
-? Lagra bilder i DB tillsammans med namn på fotografer.
+- Gallerifunktion
+- Koppling till instagram och hashtag-flöde
+- Webbappen kommer visa de senaste 1-5 fotona som laddats upp, istället för alla på en gång.
+- Mobilappen kommer att ha ett eget galleri där bilder kan laddas upp direkt utan att gå genom instagram.
+- Lagra bilder i DB tillsammans med namn på fotografer.
 
 
 Film: 
-? Koppling till YouTube / koppling med Bucketlist-projektet / koppling med webbapplikation?
-? Namn på filmskapare och medverkande i DB.
-? Länk till filmer/intervjuer i DB
-? Film uppdelat i två kategorier: film/intervju och film/event.
+- Koppling till YouTube / koppling med Bucketlist-projektet / koppling med webbapplikation?
+- Namn på filmskapare och medverkande i DB.
+- Länk till filmer/intervjuer i DB
+- Film uppdelat i två kategorier: film/intervju och film/event.
 
 Hitta:
-? Google Maps-API
-? Karta över området där utställningen kommer vara, med utmarkerade platser samt vägbeskrivning (gps/orienteringsfunktion).
+- Google Maps-API
+- Karta över området där utställningen kommer vara, med utmarkerade platser samt vägbeskrivning (gps/orienteringsfunktion).
 
 Schema:
-? “Spelschema” där varje användare kan favoritmarkera en speciell händelse.
-? Tid, datum, plats, vad.
-? Egen, självständig tabell i DB (tid, datum, plats, vad).
-? Information om vilken stad utställningen besöker under en specifik vecka.
+- “Spelschema” där varje användare kan favoritmarkera en speciell händelse.
+- Tid, datum, plats, vad.
+- Egen, självständig tabell i DB (tid, datum, plats, vad).
+- Information om vilken stad utställningen besöker under en specifik vecka.
 
 
 SkateWiki:
-? Ordlista med olika slang och uttryck som är specifika för skateboardkulturen.
-? Koppling till Bucketlist-projketet? (Nybörjarapp-projektet tar detta istället, måndag 19/9)
+- Ordlista med olika slang och uttryck som är specifika för skateboardkulturen.
+- Koppling till Bucketlist-projketet? (Nybörjarapp-projektet tar detta istället, måndag 19/9)
 
 Nyheter:
-? Senast inlagda foto, film, intervju (dessa tre kopplas ihop med Foto/Film), samt text och koppling till Twitter.
+- Senast inlagda foto, film, intervju (dessa tre kopplas ihop med Foto/Film), samt text och koppling till Twitter.
 Vi hade först en idé om att det skulle gå att länka till blogginlägg, men vi ändrade oss och tog istället med en koppling till Twitter eftersom det känns mer relevant för oss att använda till detta projektet. Hashtaggen som används på instagram kan även användas på Twitter, vilket underlättar.
 
 Sökfunktion:
-? Söka nyckelord på sidan
+- Söka nyckelord på sidan
 
 
 
