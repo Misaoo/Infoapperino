@@ -1,92 +1,114 @@
-Dokumentation för Informationsapp.
+Dokumentation fÃ¶r Informationsapp. 
 Projektmedlemmar: Johan, Maria, Tommi, Jonna, Aaron
 WU15 - Kurs: ME1580
 
-
+________________________________________
 
 Produkten:
-En webb- och mobilapplikation som ska ge och visa information som är kopplad till skateprojektet. Detta för att underlätta för utställningens besökare och ge underhållning genom foto, film och ljud
+En webb- och mobilapplikation som ska ge och visa information som Ã¤r kopplad till skateprojektet. Detta fÃ¶r att underlÃ¤tta fÃ¶r utstÃ¤llningens besÃ¶kare och ge underhÃ¥llning genom foto, film och ljud
 
 Produktens syfte:
-Att med hjälp av en digital plattform förbättra en utställning som är en analog plattform.
- 
-Vår frågeställning: 
-Hur skapar vi en stabil och säker DB och ett tillhörande API?
- 
-Varför:
-För att skapa förståelse för arkitekturen och kommunikationen mellan de olika delarna
+Att med hjÃ¤lp av en digital plattform fÃ¶rbÃ¤ttra en utstÃ¤llning som Ã¤r en analog plattform.
+VÃ¥r frÃ¥gestÃ¤llning: 
+Hur skapar vi en stabil och sÃ¤ker DB och ett tillhÃ¶rande API? (Torsdag 22/9, ny frÃ¥gestÃ¤llning! Se nedan).
 
+Hur skapar vi en sÃ¤ker webbapplikation med tillhÃ¶rande inloggningssystem och hur hanterar vi kommunikation mellan olika API:er pÃ¥ webbapplikationen?
 
+VarfÃ¶r:
+FÃ¶r att skapa fÃ¶rstÃ¥else fÃ¶r arkitekturen och kommunikationen mellan de olika delarna
 
-Projektmetod: Scrumban med inspiration från XP (eXtreme programming).
+________________________________________
+
+Projektmetod: Scrumban med inspiration frÃ¥n XP (eXtreme programming).
 
 Scrummaster: Johan
 
+________________________________________
 
-
-Språk vi kommer använda:
--     Python
--    flask ? API
+SprÃ¥k vi kommer anvÃ¤nda:
+â†’     Python
+â†’    flask â†’ API
 
 Databas:
--    Mysql
--     Json
--     AJAX
+â†’     Mysql
+â†’     Json
+â†’     AJAX
 
 Stack:
--     LAMP // Alla ska sätta sig in lite mer i detta (Linux, Apache, MySQL, PHP)
-
+â†’     LAMP // Alla ska sÃ¤tta sig in lite mer i detta (Linux, Apache, MySQL, PHP)
 
 Analogt:
--        UML
--        Loggbok/dokumentation
--        ER-modell
+â†’        UML
+â†’        Loggbok/dokumentation
+â†’        ER-modell
 
-Ev. hårdvara:
--       RPi
+Ev. hÃ¥rdvara:
+â†’       RPi
+
+________________________________________
 
 
+________________________________________
 
 Features:
 Foto:
-- Gallerifunktion
-- Koppling till instagram och hashtag-flöde
-- Webbappen kommer visa de senaste 1-5 fotona som laddats upp, istället för alla på en gång.
-- Mobilappen kommer att ha ett eget galleri där bilder kan laddas upp direkt utan att gå genom instagram.
-- Lagra bilder i DB tillsammans med namn på fotografer.
-
-
+â†’ Gallerifunktion
+â†’ Koppling till instagram och hashtag-flÃ¶de
+â†’ Webbappen kommer visa de senaste 1-5 fotona som laddats upp, istÃ¤llet fÃ¶r alla pÃ¥ en gÃ¥ng.
+â†’ Mobilappen kommer att ha ett eget galleri dÃ¤r bilder kan laddas upp direkt utan att gÃ¥ genom instagram.
+â†’ Lagra bilder i DB tillsammans med namn pÃ¥ fotografer.
 Film: 
-- Koppling till YouTube / koppling med Bucketlist-projektet / koppling med webbapplikation?
-- Namn på filmskapare och medverkande i DB.
-- Länk till filmer/intervjuer i DB
-- Film uppdelat i två kategorier: film/intervju och film/event.
+â†’ Koppling till YouTube / koppling med Bucketlist-projektet / koppling med webbapplikation?
+â†’ Namn pÃ¥ filmskapare och medverkande i DB.
+â†’ LÃ¤nk till filmer/intervjuer i DB
+â†’ Film uppdelat i tvÃ¥ kategorier: film/intervju och film/event.
 
 Hitta:
-- Google Maps-API
-- Karta över området där utställningen kommer vara, med utmarkerade platser samt vägbeskrivning (gps/orienteringsfunktion).
+â†’ Google Maps-API
+â†’ Karta Ã¶ver omrÃ¥det dÃ¤r utstÃ¤llningen kommer vara, med utmarkerade platser samt vÃ¤gbeskrivning (gps/orienteringsfunktion).
 
 Schema:
-- “Spelschema” där varje användare kan favoritmarkera en speciell händelse.
-- Tid, datum, plats, vad.
-- Egen, självständig tabell i DB (tid, datum, plats, vad).
-- Information om vilken stad utställningen besöker under en specifik vecka.
-
-
+â†’ â€œSpelschemaâ€ dÃ¤r varje anvÃ¤ndare kan favoritmarkera en speciell hÃ¤ndelse.
+â†’ Tid, datum, plats, vad.
+â†’ Egen, sjÃ¤lvstÃ¤ndig tabell i DB (tid, datum, plats, vad).
+â†’ Information om vilken stad utstÃ¤llningen besÃ¶ker under en specifik vecka.
 SkateWiki:
-- Ordlista med olika slang och uttryck som är specifika för skateboardkulturen.
-- Koppling till Bucketlist-projketet? (Nybörjarapp-projektet tar detta istället, måndag 19/9)
+â†’ Ordlista med olika slang och uttryck som Ã¤r specifika fÃ¶r skateboardkulturen.
+â†’ Koppling till Bucketlist-projketet? (NybÃ¶rjarapp-projektet tar detta istÃ¤llet, mÃ¥ndag 19/9)
 
 Nyheter:
-- Senast inlagda foto, film, intervju (dessa tre kopplas ihop med Foto/Film), samt text och koppling till Twitter.
-Vi hade först en idé om att det skulle gå att länka till blogginlägg, men vi ändrade oss och tog istället med en koppling till Twitter eftersom det känns mer relevant för oss att använda till detta projektet. Hashtaggen som används på instagram kan även användas på Twitter, vilket underlättar.
+â†’ Senast inlagda foto, film, intervju (dessa tre kopplas ihop med Foto/Film), samt text och koppling till Twitter.
+Vi hade fÃ¶rst en idÃ© om att det skulle gÃ¥ att lÃ¤nka till blogginlÃ¤gg, men vi Ã¤ndrade oss och tog istÃ¤llet med en koppling till Twitter eftersom det kÃ¤nns mer relevant fÃ¶r oss att anvÃ¤nda till detta projektet. Hashtaggen som anvÃ¤nds pÃ¥ instagram kan Ã¤ven anvÃ¤ndas pÃ¥ Twitter, vilket underlÃ¤ttar.
 
-Sökfunktion:
-- Söka nyckelord på sidan
+SÃ¶kfunktion:
+â†’ SÃ¶ka nyckelord pÃ¥ sidan
 
+________________________________________
 
+Struktur fÃ¶r DB - vad som ska lagras.
 
-Struktur för DB - vad som ska lagras.
+Nyheter:
+- ID (pirmary key)
+- Text
+- M_ID (foreign key) ?
+- St_ID (foreign key) ?
+
+Schema:
+- ID (primary key)
+- Dagar
+- Time/date
+- Plats (var pÃ¥ utstÃ¤llningen)
+- Text som beskriver vad som ska hÃ¤nda
+- St_ID (foreign key)
+
+StÃ¤der:
+- ID (primary key)
+- Stad (Namn pÃ¥ staden)
+- Veckor
+- Plats (var i staden)
+
+Sociala media:
+- 
 
 Media:
 Foto:
@@ -104,54 +126,25 @@ Film:
 - Time/date
 - Typ (Film eller foto)
 
-Schema:
-- ID (primary key)
-- Dagar
-- Time/date
-- Plats (var på utställningen)
-- Text som beskriver vad som ska hända
-- St_ID (foreign key)
-
-Nyheter:
-- ID (pirmary key)
-- Text
-- M_ID (foreign key) ?
-- St_ID (foreign key) ?
-
-
 Personer:
 - ID (primary key)
-- Förnamn
+- FÃ¶rnamn
 - Efternamn
 - Nickname
 Denna tabellen kopplas ihop med foto och film.
 
-Städer:
-- ID (primary key)
-- Stad (Namn på staden)
-- Veckor
-- Plats (var i staden)
+________________________________________
 
+Funktioner fÃ¶r API / Application Programming Interface.
 
-
-Funktioner för API / Application Programming Interface.
-
-Media:
+Nyheter:
 GET:
-URL
-P_ID
-St_ID
-time/date
-typ
-text
+        St_ID
+        M_ID
+        text
 
-
-POST:
-URL
-P_ID
-St_ID
-typ
-text
+        POST:
+        text
 
 Schema:
         GET:
@@ -170,22 +163,7 @@ Schema:
         plats
 text
 
-Nyheter:
-GET:
-        St_ID
-        M_ID
-        text
-
-        POST:
-        text
-
-Personer:
-POST:    
-Förnamn
-Efternamn
-Nickname
-
-Städer:
+StÃ¤der:
     GET:
     Stad
     Vecka
@@ -200,37 +178,81 @@ Städer:
     Vecka
     Plats
 
+Sociala media:
+    GET:
+    POST:
+    PUT:
 
+Personer:
+POST:    
+FÃ¶rnamn
+Efternamn
+Nickname
+
+Media:
+GET:
+URL
+P_ID
+St_ID
+time/date
+typ
+text
+POST:
+URL
+P_ID
+St_ID
+typ
+text
+________________________________________
+
+ER-modell
+ER-modell, figur 1
+ER-modell, figur 2 
+ 
+________________________________________
+________________________________________
 
 Veckoplanering
 
 Vecka 37 / kursvecka 3 av 9:
 VAD?
-Vad ska undersökas - frågeställning? - Fredag 16/9
- Planera sprintar – dela upp i mindre stories - (Pågående)
-
+â€¢	Vad ska undersÃ¶kas - frÃ¥gestÃ¤llning? - Fredag 16/9
+â€¢	Planera sprintar â€“ dela upp i mindre stories - (PÃ¥gÃ¥ende)
 
 Vecka 38 / kursvecka 4 av 9 / Sprint 0:
 VAD?
 Prio 1:
-Bestämma språk - Måndag 19/9
-Utveckla våra features - Måndag 19/9 
-Struktur för DB, vad som ska lagras - Tisdag 20/9
-Funktioner för API - Tisdag 20/9
+â€¢	BestÃ¤mma sprÃ¥k - MÃ¥ndag 19/9
+â€¢	Utveckla vÃ¥ra features - MÃ¥ndag 19/9 
+â€¢	Struktur fÃ¶r DB, vad som ska lagras - Tisdag 20/9
+â€¢	Funktioner fÃ¶r API - Tisdag 20/9
 
 Prio 2:
-Läsa/undersöka DB och API, hur funkar det?
-Hur optimeras de?
-UML, rita upp
-Planera Sprint 1
-
+â€¢	LÃ¤sa/undersÃ¶ka DB och API, hur funkar det? - Tisdag/Onsdag 20-21/9
+â€¢	Hur optimeras de?
+â€¢	ER-modell, rita upp - Onsdag och torsdag 21-22/9
+â€¢	UML, rita upp (Flyttat till nÃ¤sta vecka)
+â€¢	Planera Sprint 1 (Flyttat till nÃ¤sta vecka)
 
 Vecka 39 / kursvecka 5 av 9 / Sprint 1:
 VAD?
 Prio 1:
+â€¢	Planera Sprint 1 - Tisdag 27/9
+â€¢	Kolla in API:er
+â€¢	FÃ¥ igÃ¥ng Instagram-flÃ¶de
+â€¢	Skissa upp flÃ¶desschema fÃ¶r appen - MÃ¥ndag 26/9
+â€¢	GÃ¶ra inloggningssida och blogg post sida
+â€¢	BÃ¶rja pÃ¥ DB och kryptering av inlogg
+â€¢	Skapa layout fÃ¶r appen - HTML, CSS, JS
+â€¢	ER-modell - Tisdag 27/9
+â€¢	UML-diagram
+
+Prio 2:
+â€¢	
 
 
+LÃ¤ngre fram (kanske v.39/40?):
+â€¢	Ta kontakt med skejtare.
+â€¢	Koppling till Web of Things?
 
-Längre fram (kanske v.39/40?):
-Ta kontakt med skejtare.
-Koppling till Web of Things?
+
