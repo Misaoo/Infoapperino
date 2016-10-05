@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Välkommen till informationsappen</title>
+  <meta charset="utf-8">
+
+    <!-- gör sidan mobil-anpassad -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- gör sidan mobil-anpassad och utan inzoomningsmöjlighet
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='style.js') }}"></script>
+
+</head>
+
+<body>
+
+<!-- sidenav bar från http://www.w3schools.com/howto/howto_js_sidenav.asp-->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Hem</a>
+    <a href="/schema">Schema</a>
+    <a href="#">Blogg</a>
+    <a href="#">Galleri</a>
+    <a href="#">Kartor</a>
+    <a href="#">Hitta hit</a>
+    <a href="#">Kontakt</a>
+    <a href="#">Info om projektet</a>
+</div>
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; meny</span>
+</div>
+
+
+
