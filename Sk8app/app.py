@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 from flask import Flask, flash, redirect, render_template, request, session
 import os
 import time
@@ -99,5 +99,4 @@ def logout():
 
 if __name__ == "__main__":
     app.secret_key = os.urandom(12)
->>>>>>> refs/remotes/origin/master
     app.run(debug=True)
