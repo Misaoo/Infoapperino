@@ -36,11 +36,10 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+            <state relative-caret-position="692">
+              <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
               <folding>
-                <marker date="1476102985125" expanded="true" signature="502:563" ph="SELECT email... admin" />
-                <marker date="1476102985125" expanded="true" signature="1674:1733" ph="SELECT email... admin" />
+                <marker date="1476103112993" expanded="true" signature="502:563" ph="SELECT email... admin" />
               </folding>
             </state>
           </provider>
@@ -579,8 +578,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1476102985125" expanded="true" signature="502:563" ph="SELECT email... admin" />
-            <marker date="1476102985125" expanded="true" signature="1674:1733" ph="SELECT email... admin" />
+            <marker date="1476103112993" expanded="true" signature="502:563" ph="SELECT email... admin" />
           </folding>
         </state>
       </provider>
@@ -632,8 +630,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1476102985125" expanded="true" signature="502:563" ph="SELECT email... admin" />
-            <marker date="1476102985125" expanded="true" signature="1674:1733" ph="SELECT email... admin" />
+            <marker date="1476103112993" expanded="true" signature="502:563" ph="SELECT email... admin" />
           </folding>
         </state>
       </provider>
@@ -685,8 +682,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1476102985125" expanded="true" signature="502:563" ph="SELECT email... admin" />
-            <marker date="1476102985125" expanded="true" signature="1674:1733" ph="SELECT email... admin" />
+            <marker date="1476103112993" expanded="true" signature="502:563" ph="SELECT email... admin" />
           </folding>
         </state>
       </provider>
@@ -925,11 +921,10 @@
     <entry file="dbDummy://dbtable:/3002473a/e40a573e-20ae-46ad-a8ac-617883dce57d/skatefest.admin" />
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+        <state relative-caret-position="692">
+          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
           <folding>
-            <marker date="1476102985125" expanded="true" signature="502:563" ph="SELECT email... admin" />
-            <marker date="1476102985125" expanded="true" signature="1674:1733" ph="SELECT email... admin" />
+            <marker date="1476103112993" expanded="true" signature="502:563" ph="SELECT email... admin" />
           </folding>
         </state>
       </provider>
