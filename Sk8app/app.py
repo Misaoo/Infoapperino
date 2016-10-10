@@ -18,11 +18,9 @@ def do_admin_login():
         POST_USERNAME = str(request.form["username"])
         POST_PASSWORD = str(request.form["password"])
 
-        query = "SELECT email, password, firstname FROM admin WHERE email='%s'" % POST_USERNAME
+        query = "SELECT email, password, firstname FROM admin WHERE email=%s"
 
-        print(query)
-
-        config.cur.execute(query)
+        config.cur.execute(query, (POST_USERNAME,))
 
         result = config.cur.fetchall()
         for i in result:
@@ -34,6 +32,17 @@ def do_admin_login():
                 return "Wrong Username"
             elif POST_PASSWORD != i[1]:
                 return "Wrong Password"
+
+@app.route('/bloggpost')
+def create_post():
+
+    if session['logged_in']:
+        return render_template('bloggpost.html')
+
+
+
+    return ''
+
 
 @app.route("/logout")
 def logout():
