@@ -19,11 +19,11 @@ def do_admin_login():
         POST_USERNAME = str(request.form["username"])
         POST_PASSWORD = str(request.form["password"])
 
-        query = "SELECT email, password, firstname FROM admin WHERE email='%s'" % POST_USERNAME
+        query = "SELECT email, password, firstname FROM admin WHERE email=%s"
 
         print(query)
 
-        config.cur.execute(query)
+        config.cur.execute(query, (POST_USERNAME,))
 
         result = config.cur.fetchall()
         for i in result:
