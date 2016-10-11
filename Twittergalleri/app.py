@@ -1,12 +1,11 @@
 from flask import Flask, render_template
 import authenticate
-import tweepy
-from tweepy import OAuthHandler
+
 
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/getImages')
 def findtweet():
 
     images = []
@@ -16,10 +15,16 @@ def findtweet():
             for image in tweet.entities['media']:
                 images.append(image['media_url'])
                 print(image['media_url'])
-    #images.append(image['media_url'])
+
     print(images)
     print (len(images))
-    return render_template("index.html", images=images)
+    return images
+
+
+@app.route('/')
+def index():
+    return render_template("index.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
