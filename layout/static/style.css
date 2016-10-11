@@ -4,7 +4,6 @@ body {
     transition: background-color .5s;
 }
 
-
 /*bilder i sliden*/
 #bild1 {
 	background-image: url("skate1.jpg");
@@ -55,7 +54,7 @@ body {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 99999;
+    z-index: 1;
     top: 0;
     left: 0;
     background-color: #111;
@@ -75,6 +74,16 @@ body {
 
 .sidenav a:hover, .offcanvas a:focus{
     color: #f1f1f1;
+}
+
+#login {
+        font-size: 20px;
+}
+
+#hr {
+    width: auto;
+    margin: 0 10px;
+    background-color: #818181;
 }
 
 .sidenav .closebtn {
