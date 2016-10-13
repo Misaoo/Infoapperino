@@ -30,12 +30,34 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <form action="/bloggpost" method="POST">
+            <div class="blogg">
+                <div class="post-screen">
+                    <div class="app-title">
+                        <h1>Create blog post</h1>
+                    </div>
+
+                    <div class="bloggpost-form">
+                        <div class="control-group">
+                        <input type="text" value="" placeholder="heading" name="heading">
+                        </div>
+
+                        <div class="control-group">
+                        <input type="password" class="login-field" value="" placeholder="password" name="password">
+                        <label class="login-field-icon fui-lock" for="login-pass"></label>
+                        </div>
+
+                        <input type="submit" value="Log in" class="btn btn-primary btn-large btn-block" >
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </form>
 
 
-        {% block body %}{% endblock %}
 
 
-    <!-- /container -->        <script src="{{ url_for('static', filename='js/vendor/jquery-1.11.2.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/vendor/jquery-1.11.2.min.js') }}"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script src="{{ url_for('static', filename='js/vendor/bootstrap.min.js') }}"></script>
