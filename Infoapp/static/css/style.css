@@ -1,0 +1,27 @@
+body{
+	padding: 0px;
+}
+#pad{
+	margin-top: 5%;
+}
+.navbar-inverse{
+	background-image: none;
+	border-color: transparent;
+	background-color: #00e676;
+}
+.navbar-inverse .navbar-brand{
+	color: black;
+}
+#butt{
+	background-image: none;
+	background-color: white;
+	color: #333;
+}
+.head{
+	padding-bottom: 1%;
+	text-align: center;
+	
+}
+.headrow {
+	background-color: #00e676;
+}
