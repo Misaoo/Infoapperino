@@ -48,21 +48,50 @@ def create_post():
 
         print request.form["heading"]
 
-        query = "INSERT INTO post (headline, text) VALUES (%s, %s)"
+        query = "INSERT INTO post (headline, text, date) VALUES (%s, %s, now())"
 
         print query
 
         config.cur.execute(query, (post_heading, post_text))
 
         return render_template("blogpost.html")
+    else:
+        return redirect('/')
 
 
-    elif request.method == 'GET':
+    if request.method == 'GET':
         return render_template("blogpost.html")
 
-@app.route('/index', methods=['POST', 'GET'])
-def index_troll():
-    return render_template("index.html")
+@app.route('/blogg')
+def blogg():
+
+    bloggPosts = []
+
+    query = "SELECT headline, text FROM post ORDER BY date DESC"
+    config.cur.execute(query)
+    result = config.cur.fetchall()
+
+    for i in result:
+        bloggPosts.append(i)
+
+    print bloggPosts
+
+
+
+    bloggHead = []
+    bloggText = []
+
+    for i in bloggPosts:
+        #print i[0]
+        bloggHead.append(i[0])
+        bloggText.append(i[1])
+    #bloggHead = bloggPosts[0][0]
+    #bloggText = bloggPosts[0][1]
+
+    print bloggHead
+    print bloggText
+
+    return render_template("posts.html", bloggPosts=bloggPosts)
 
 @app.route("/logout")
 def logout():

@@ -1,18 +1,11 @@
 {% include "header.html" %}
 
+{% for post in bloggPosts %}
 
+    <h3 id="bloggHead">{{ post[0] }}</h3>
 
-{% for heading in bloggHead %}
-
-    <h3 id="bloggHead">{{ heading }}</h3>
-
-{% endfor %}
-
-{% for text in bloggText %}
-
-    <h5 id="bloggText">{{ text }}</h5>
+    <h5 id="bloggText">{{ post[1] }}</h5>
 
 {% endfor %}
-
 
 {% include "footer.html"%}
