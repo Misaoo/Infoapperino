@@ -9,6 +9,8 @@ daquan.txt
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff:
+Infoapp/.idea/workspace.xml
+Sk8app/.idea/workspace.xml
 .idea/workspace.xml
 .idea/tasks.xml
 .idea/dictionaries

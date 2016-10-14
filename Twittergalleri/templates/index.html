@@ -8,13 +8,34 @@
 <body>
 
 <div id="image">
-    {% for image in images %}
-        <img src= {{image}} style='width:150px;height:150px;'>
-    {% endfor %}
 </div>
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
 
+    var timeOutId = 0;
+    var ajaxFn = function () {
+        $.ajax({
+            url: '/Images',
+            success: function (response, data) {
+                if (response == 'True') {
+                    clearTimeout(timeOutId);
+                } else {
+                    timeOutId = setTimeout(ajaxFn, 5000);
+                    images = JSON.parse(response)
+                    for(i = 0; i < images.length; i++){
+                            $("#image").append("<img src='" + images[i] + "'style=width:200px;height:200px;>'");
+
+                    }
+
+
+                    console.log(images)
+                }
+            }
+        });
+}
+ajaxFn();
+   </script>
 
 
 </body>

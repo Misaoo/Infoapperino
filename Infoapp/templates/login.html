@@ -1,0 +1,16 @@
+{% include "header.html" %}
+
+
+        <form action="/login" method="POST" class="form-signin">
+            <h2 class="form-signin-heading">Logga In</h2>
+            <input type="text" class="form-control" name="username" placeholder="Email" required="" autofocus="" />
+            <input type="password" class="form-control" name="password" placeholder="Lösenord" required="" />
+            <label class="checkbox">
+                <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Kom ihåg mig
+            </label>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Logga in</button>
+        </form>
+
+
+</body>
+{% include "footer.html" %}
