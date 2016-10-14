@@ -4,8 +4,6 @@ import os
 import time
 import config
 
-
-
 app = Flask(__name__)
 
 @app.route('/')
@@ -37,7 +35,6 @@ def do_admin_login():
         return render_template("login.html")
 
 
-
 @app.route("/blogpost", methods=['POST', 'GET'])
 def create_post():
 
@@ -48,21 +45,37 @@ def create_post():
 
         print request.form["heading"]
 
-        query = "INSERT INTO post (headline, text) VALUES (%s, %s)"
+        query = "INSERT INTO post (headline, text, date) VALUES (%s, %s, now())"
 
         print query
 
         config.cur.execute(query, (post_heading, post_text))
 
         return render_template("blogpost.html")
+    else:
+        return redirect('/')
 
 
-    elif request.method == 'GET':
+    if request.method == 'GET' and session.get("logged_in") == True:
         return render_template("blogpost.html")
+    else:
+        return redirect('/')
+@app.route('/blogg', methods=['POST', 'GET'])
+def blogg():
+    bloggPosts = []
+    limit = 3
 
-@app.route('/index', methods=['POST', 'GET'])
-def index_troll():
-    return render_template("index.html")
+    if request.method == 'POST':
+        limit = int(request.form['limit']) + 3
+
+    query = "SELECT headline, text, date FROM post ORDER BY date DESC LIMIT %s "
+    config.cur.execute(query, (limit,))
+    result = config.cur.fetchall()
+
+    for i in result:
+        bloggPosts.append(i)
+
+    return render_template("posts.html", bloggPosts=bloggPosts, limit = limit)
 
 @app.route("/logout")
 def logout():

@@ -1,18 +1,33 @@
 {% include "header.html" %}
 
+<div class="row">
+    <div class="col-md-12" style="text-align: center; background-color: #f2f2f2; padding-bottom: 2rem">
+        <h1>Bloggen</h1>
+    </div>
+</div>
 
 
-{% for heading in bloggHead %}
 
-    <h3 id="bloggHead">{{ heading }}</h3>
+<div class="row" style="padding-top: 2rem;">
+{% for post in bloggPosts %}
+
+    <div class="col-md-6 col-md-offset-3">
+        <h3 id="bloggHead">{{ post[0] }}</h3>
+
+        <h5 id="bloggText">{{ post[1] }}</h5>
+        <hr style="border-color:#999;">
+    </div>
 
 {% endfor %}
+</div>
 
-{% for text in bloggText %}
-
-    <h5 id="bloggText">{{ text }}</h5>
-
-{% endfor %}
-
+<div class="row" style="padding-bottom: 3rem">
+    <div class="col-md-6 col-md-offset-3">
+        <form action="{{ blogg }}" method="POST">
+            <input type="submit" value="Ladda fler" class="btn btn-primary">
+            <input type="hidden" name="limit" value="{{ limit }}">
+        </form>
+    </div>
+</div>
 
 {% include "footer.html"%}

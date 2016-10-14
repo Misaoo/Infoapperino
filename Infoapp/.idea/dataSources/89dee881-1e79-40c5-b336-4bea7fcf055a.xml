@@ -48,7 +48,10 @@
       <mandatory>1</mandatory>
       <data-type>varchar(3000)|0</data-type>
     </column>
-    <key id="17" parent="7" name="PRIMARY">
+    <column id="17" parent="7" name="date">
+      <data-type>datetime|0</data-type>
+    </column>
+    <key id="18" parent="7" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
