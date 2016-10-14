@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Gallery</title>
+    <link rel="stylesheet" type="text/css" href="../static/stylesheet.css">
 </head>
-
 <body>
-
 <div id="image">
-</div>
+
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script>
@@ -21,10 +20,10 @@
                 if (response == 'True') {
                     clearTimeout(timeOutId);
                 } else {
-                    timeOutId = setTimeout(ajaxFn, 5000);
+                    timeOutId = setTimeout(ajaxFn, 50000);
                     images = JSON.parse(response)
                     for(i = 0; i < images.length; i++){
-                            $("#image").append("<img src='" + images[i] + "'style=width:200px;height:200px;>'");
+                            $("#image").append("<img src='" + images[i] + "'>");
 
                     }
 
@@ -37,6 +36,7 @@
 ajaxFn();
    </script>
 
+</div>
 
 </body>
 </html>

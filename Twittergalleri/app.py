@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 import authenticate
 import json
+import mysql
 
 
 app = Flask(__name__)
@@ -11,12 +12,12 @@ def findtweet():
 
     images = []
 
-    for tweet in authenticate.tweepy.Cursor(authenticate.api.search, q="#BTHSkate", include_entities=True).items(20):
+    for tweet in authenticate.tweepy.Cursor(authenticate.api.search, q="#BTHSkate" , include_entities=True).items(20):
         if 'media' in tweet.entities:
             for image in tweet.entities['media']:
                 images.append(image['media_url'])
                 print(image['media_url'])
-
+    print(tweet)
     print (images)
     print (len(images))
     return json.dumps(images)
