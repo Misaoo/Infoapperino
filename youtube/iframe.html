@@ -1,0 +1,55 @@
+<!DOCOTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Youtube</title>
+
+<script type="test.js"></script>
+</head>
+<body>
+
+	
+   	<div id="videos">
+      <!-- vids go here -->
+    </div>
+  </div>
+	
+	
+	<div class"conatiner">
+
+		<iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/7CwNCL5aGUI" frameborder="0" allowfullscreen></iframe>
+		<iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/KMwhGE0vd-w"frameborder="0" allowfullscreen></iframe>
+
+	</div>
+
+	<script>
+	var tag = document.createElement('script');
+	tag.src = "https://www.youtube.com/iframe_api";
+	var firstScriptTag = document.getElementsByTagName('script')[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	
+
+	var player;
+		
+	function onYouTubeIframeAPIReady(){
+			
+		player = new YT.player('player', {
+			events : {
+				'onReady' : onPlayerReady,
+				'onStateChange': onPlayerStateChange
+			}
+		})
+	}
+		
+	function onPlayerReady(e){
+		e.target.playVideo();
+
+	}	
+
+
+	
+	</script>		
+
+
+	</body>
+</html>
