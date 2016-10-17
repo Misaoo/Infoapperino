@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Gallery</title>
-</head>
-
-<body>
+{% include "header.html" %}
 
 <div id="image">
 </div>
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename="jquery-3.1.1.min.js") }}"></script>
 <script>
 
     var timeOutId = 0;
@@ -43,4 +36,4 @@ ajaxFn();
 
 
 </body>
-</html>
+{% include "footer.html" %}

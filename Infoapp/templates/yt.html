@@ -1,19 +1,9 @@
-<!DOCOTYPE html>
-<html>
-	<head>
+{% include "header.html" %}
 
-		<title>Youtube</title>
-		<meta http-equiv="refresh" content="60">
-
-        <script type="text/javascript" src="{{ url_for('static', filename='jquery-3.1.1.min.js') }}"></script>
-        <script type="text/javascript" src="{{ url_for('static', filename='youtube.js') }}"></script>
-	</head>
-
-<body>
-	<div id="container">
+    <div id="container">
 		<h1>youtube</h1>
 		<ul id="results"></ul>
 	</div>
 
 </body>
-</html>
+{% include "footer.html" %}
