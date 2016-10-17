@@ -3,18 +3,26 @@ from flask import Flask, flash, redirect, render_template, request, session
 import os
 import time
 import config
+import authenticate
+import json
 
 app = Flask(__name__)
 
 @app.route('/')
-def home():
+def home(name=None):
+    return render_template('index.html', name=name)
+
+@app.route('/loggain')
+def logga_in():
     if not session.get('logged_in'):
         return render_template('login.html')
     else:
         return render_template("blogpost.html")
 
+
 @app.route('/login', methods=['POST', 'GET'])
 def do_admin_login():
+
     if request.method == 'POST':
         POST_USERNAME = str(request.form["username"])
         POST_PASSWORD = str(request.form["password"])
@@ -28,7 +36,7 @@ def do_admin_login():
 
             if i[0] == POST_USERNAME and i[1] == POST_PASSWORD:
                 session['logged_in'] = True
-                return home()
+                return render_template('blogpost.html')
             elif POST_PASSWORD != i[1]:
                 return "Wrong Password"
     elif request.method == 'GET':
@@ -59,7 +67,8 @@ def create_post():
     if request.method == 'GET' and session.get("logged_in") == True:
         return render_template("blogpost.html")
     else:
-        return redirect('/')
+        return redirect('/login')
+
 @app.route('/blogg', methods=['POST', 'GET'])
 def blogg():
     bloggPosts = []
@@ -80,7 +89,45 @@ def blogg():
 @app.route("/logout")
 def logout():
     session['logged_in'] = False
-    return home()
+    return logga_in()
+
+@app.route('/schema')
+def schema(name=None):
+
+    return render_template('schema.html', name=name)
+
+
+@app.route('/yt')
+def yt(name=None):
+
+    return render_template('yt.html', name=name)
+
+
+@app.route('/iframe')
+def iframe(name=None):
+
+    return render_template('iframe.html', name=name)
+
+
+@app.route('/twittergalleri')
+def twittergalleri():
+
+    return render_template("twittergalleri.html", findtweet=findtweet())
+
+
+@app.route('/Images')
+def findtweet():
+    images = []
+    for tweet in authenticate.tweepy.Cursor(authenticate.api.search, q="#BTHSkate", include_entities=True).items(20):
+        if 'media' in tweet.entities:
+            for image in tweet.entities['media']:
+                images.append(image['media_url'])
+                print(image['media_url'])
+
+    print(images)
+    print (len(images))
+    return json.dumps(images)
+
 
 
 if __name__ == "__main__":
