@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<head>
+  <title>Välkommen till informationsappen</title>
+  <meta charset="utf-8">
+
+    <!-- gör sidan mobil-anpassad -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Informationsappen</title>
+    <!-- gör sidan mobil-anpassad och utan inzoomningsmöjlighet
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
 
-    <!-- CSS -->
-      <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
-      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename="bootstrap.min.css") }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="{{ url_for('static', filename="jquery-3.1.1.min.js") }}"></script>
+  <script src="{{ url_for('static', filename="bootstrap.min.js") }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='style.js') }}"></script>
 
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
+</head>
 
+<body>
 
+<!-- sidenav bar från http://www.w3schools.com/howto/howto_js_sidenav.asp-->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/">Hem</a>
+    <a href="/schema">Schema</a>
+    <a href="/blogg">Blogg</a>
+    <a href="/twittergalleri">Galleri</a>
+    <a href="/yt">Kartor</a>
+    <a href="#">Hitta hit</a>
+    <a href="#">Kontakt</a>
+    <a href="#">Info om projektet</a>
+    <!--<br><hr id="hr"><br>
+    <a id="login" href="/admin">Administratörer</a>-->
+</div>
 
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    </head>
-
-  <body>
-<!-- Häftig header från https://codepen.io/soulrider911/pen/dGuEn -->
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; meny</span>
+</div>
 

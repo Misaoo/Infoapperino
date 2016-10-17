@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+</head>
+
+<body>
+
+<div id="image">
+</div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+
+    var timeOutId = 0;
+    var ajaxFn = function () {
+        $.ajax({
+            url: '/Images',
+            success: function (response, data) {
+                if (response == 'True') {
+                    clearTimeout(timeOutId);
+                } else {
+                    timeOutId = setTimeout(ajaxFn, 300000);
+                    images = JSON.parse(response)
+                    for(i = 0; i < images.length; i++){
+                        $("#image").append("<img src='"+images[i]+"'>");
+
+
+
+
+
+                    }
+
+
+                    console.log(images)
+                }
+            }
+        });
+}
+ajaxFn();
+   </script>
+
+
+</body>
+</html>
